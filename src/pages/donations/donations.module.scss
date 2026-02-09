@@ -68,7 +68,7 @@
     }
   }
 
-  .border {
+  article:not(:last-child) {
     border-right: solid 1px #cbcbcb;
   }
 }

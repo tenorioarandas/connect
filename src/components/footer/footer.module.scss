@@ -1,10 +1,27 @@
+@use "../../variables" as *;
+
 footer {
-  background-color: rgba(32, 86, 145, 0.1);
+  background-color: #e9eff4;
   font-family: "Inter", sans-serif;
+  font-size: $size-base;
   text-align: center;
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
   padding: 1rem;
+}
+
+/* lg */
+@media (max-width: 1024px) {
+  footer {
+    font-size: $size-sm;
+  }
+}
+
+/* md */
+@media (max-width: 768px) {
+  footer {
+    font-size: $size-xs;
+  }
 }
