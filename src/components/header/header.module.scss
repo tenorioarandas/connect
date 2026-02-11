@@ -6,6 +6,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 10px 20px;
+  width: 100%;
 
   .imgLogo {
     max-width: 65px;
@@ -86,6 +87,10 @@
 
 /* md */
 @media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+
   .nav {
     justify-content: space-around;
     .Link {

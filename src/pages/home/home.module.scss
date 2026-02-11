@@ -1,15 +1,18 @@
+@use "../../variables" as *;
+
 .main {
-  display: none;
+  display: flex;
   justify-content: space-around;
   margin-bottom: 20px;
   padding: 0 20px;
+  height: 60vh;
+  overflow-x: hidden;
+  height: 80vh;
 
   img {
     flex: 1;
     display: block;
-    max-width: 100%;
-    min-width: 0;
-    height: auto;
+    height: 70vh;
     object-fit: contain;
   }
 }
@@ -19,39 +22,47 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  align-items: start;
 
   h1 {
     font-family: "Source Sans 3", sans-serif;
     font-weight: 700;
-    font-size: 90px;
+    font-size: $size-8xl;
     color: #205691;
-    max-width: 45rem;
+    max-width: 50rem;
+    line-height: 1;
   }
 
   p {
     font-family: "Inter", sans-serif;
-    font-size: 24px;
+    font-size: $size-2xl;
     font-weight: 400;
     color: #205691;
     max-width: 45rem;
+    line-height: 1.5;
   }
 
   button {
-    max-width: 332px;
-    padding: 20px 0;
+    padding: $size-2xl;
     background-color: #fd7267;
     color: #fff;
-
-    font-size: 24px;
+    font-size: $size-2xl;
     font-weight: 600;
     border: none;
+    transition: 0.3s;
     cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #205691;
+    color: #fff;
   }
 }
 
 .infoDados {
   display: flex;
   justify-content: space-between;
+  width: 45rem;
 
   h2,
   h3 {
@@ -62,7 +73,131 @@
 
   h2 {
     font-family: "Source Sans 3", sans-serif;
-    font-size: 50px;
+    font-size: $size-6xl;
     font-weight: 700;
   }
+
+  h3 {
+    font-size: $size-xl;
+  }
+}
+
+/* 2xl */
+@media (max-width: 1536px) {
+  .info {
+    max-width: 45vw;
+
+    h1 {
+      font-size: $size-6xl;
+      max-width: 30rem;
+    }
+    p {
+      font-size: $size-xl;
+      max-width: 35rem;
+    }
+    button {
+      font-size: $size-xl;
+    }
+  }
+
+  .infoDados {
+    max-width: 35rem;
+
+    h2 {
+      font-size: $size-4xl;
+    }
+    h3 {
+      font-size: $size-base;
+    }
+  }
+}
+
+/* xl */
+@media (max-width: 1280px) {
+  .main {
+    img {
+      flex: 0;
+      height: 60vh;
+    }
+  }
+
+  .info {
+    height: 60vh;
+
+    h1 {
+      font-size: $size-5xl;
+      max-width: 25rem;
+    }
+    p {
+      font-size: $size-base;
+      max-width: 30rem;
+    }
+
+    button {
+      font-size: $size-lg;
+      padding: $size-lg;
+      margin-top: 0;
+    }
+  }
+
+  .infoDados {
+    max-width: 30rem;
+    margin-top: 0;
+
+    h2 {
+      font-size: $size-3xl;
+    }
+    h3 {
+      font-size: $size-sm;
+    }
+  }
+}
+
+/* lg */
+@media (max-width: 1024px) {
+  .main {
+    justify-content: space-between;
+
+    img {
+      flex: 0;
+      height: 50vh;
+    }
+  }
+  .info {
+    max-width: 50vw;
+  }
+  .infoDados {
+    max-width: 25rem;
+  }
+}
+
+/* md */
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .info {
+    align-items: center;
+    max-width: 30rem;
+    p {
+      max-width: inherit;
+    }
+  }
+
+  img {
+    object-fit: cover;
+    border-radius: 100%;
+  }
+}
+
+/* sm */
+@media (max-width: 640px) {
+}
+
+/* xs */
+@media (max-width: 475px) {
 }

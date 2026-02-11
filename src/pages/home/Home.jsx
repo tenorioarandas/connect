@@ -28,6 +28,7 @@ export default function PaginaInicial() {
           </section>
         </section>
         <img
+          className={S.img}
           src={banner}
           alt="Imagem de mãos segurando o globo terrestre representando a responsibilidade social e ambiental"
         />
