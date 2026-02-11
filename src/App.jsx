@@ -4,7 +4,7 @@ import Home from "./pages/home/Home";
 import Donations from "./pages/donations/Donations";
 import Volunteering from "./pages/volunteering/Volunteering";
 import Mentoring from "./pages/mentoring/Mentoring";
-import Lectures from "./pages/Lectures/Lectures";
+import Lectures from "./pages/lectures/Lectures";
 import User from "./pages/user/User";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
