@@ -1,6 +1,10 @@
+@use "../../variables" as *;
+
 .main {
   text-align: center;
   margin-top: 2rem;
+  height: 80vh;
+  overflow-x: hidden;
 
   h1 {
     color: #122f97;
@@ -12,7 +16,6 @@
 .lectures {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
 
   article {
     display: flex;
@@ -30,10 +33,14 @@
     }
 
     img {
-      width: 100%;
+      width: 400px;
       height: 200px;
       object-fit: cover;
       border-radius: 10px;
+    }
+
+    h2 {
+      font-size: $size-3xl;
     }
 
     h2,
@@ -53,7 +60,7 @@
     button {
       background-color: #205691;
       color: #fff;
-      font-size: 1rem;
+      font-size: $size-xl;
       font-weight: 500;
       border: none;
       border-radius: 10px;
@@ -68,7 +75,110 @@
     }
   }
 
-  .border {
+  article:not(:last-child) {
     border-right: solid 1px #cbcbcb;
   }
+}
+
+/* 2xl */
+@media (max-width: 1536px) {
+}
+
+/* xl */
+@media (max-width: 1280px) {
+  .main {
+    h1 {
+      font-size: $size-4xl;
+    }
+  }
+
+  .lectures {
+    article {
+      overflow-x: hidden;
+      img {
+        width: 300px;
+      }
+
+      h2 {
+        font-size: $size-2xl;
+      }
+
+      p {
+        font-size: $size-sm;
+        max-width: 300px;
+      }
+
+      button {
+        font-size: $size-base;
+      }
+    }
+  }
+}
+
+/* lg */
+@media (max-width: 1024px) {
+  .lectures {
+    article {
+      img {
+        width: 100%;
+        border-radius: 0;
+      }
+
+      h2 {
+        font-size: $size-xl;
+      }
+
+      p {
+        font-size: $size-xs;
+        max-width: 250px;
+      }
+
+      button {
+        font-size: $size-sm;
+        padding: $size-sm;
+      }
+    }
+  }
+}
+
+/* md */
+@media (max-width: 768px) {
+  .main {
+    height: 80vh;
+  }
+
+  .lectures {
+    display: flex;
+    flex-direction: column;
+
+    article {
+      justify-content: space-around;
+      img {
+        width: 100%;
+        border-radius: 10px;
+      }
+
+      h2 {
+        font-size: $size-2xl;
+      }
+
+      p {
+        font-size: $size-sm;
+        max-width: 100%;
+      }
+
+      button {
+        font-size: $size-base;
+        padding: $size-base;
+      }
+    }
+  }
+}
+
+/* sm */
+@media (max-width: 640px) {
+}
+
+/* xs */
+@media (max-width: 475px) {
 }
